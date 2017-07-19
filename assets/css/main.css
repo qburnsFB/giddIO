@@ -1,4 +1,81 @@
-/* Colors */
+* {
+  border: 1px dotted #E63946; }
+
+body {
+  font-family: "objektiv-mk2", sans-serif;
+  font-size: 1rem;
+  color: #1D3557; }
+
+#logo {
+  float: left;
+  margin: 4px 6px; }
+  #logo:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #logo img {
+    width: 200px;
+    height: auto; }
+
+nav {
+  display: block;
+  float: right;
+  margin: 4px 6px 0 0;
+  padding: 4px 12px; }
+  nav:after {
+    content: "";
+    display: table;
+    clear: both; }
+  nav ul {
+    text-decoration: none;
+    list-style: none; }
+  nav li, nav li a {
+    margin: 0 auto;
+    padding: 0 12px 2px 5px;
+    display: inline-block;
+    text-align: center; }
+  nav a, nav a:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1D3557; }
+  nav .active {
+    color: #E63946;
+    border-bottom: 4px solid #E63946; }
+
+.hero-banner {
+  margin: 0 auto;
+  width: 100vw;
+  height: 85vh;
+  background: url("http://hanksrepublic.com/wp-content/uploads/2017/05/ravishing-4k-desktop-wallpapers.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden; }
+
+.hero-info {
+  position: absolute;
+  top: 25%;
+  right: 6%; }
+  .hero-info:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.hero-heading {
+  font-size: 2.5rem;
+  color: white; }
+
+.static-phone {
+  position: fixed;
+  left: 10%;
+  top: 18%; }
+  .static-phone img {
+    height: 75vh; }
+
+.container {
+  margin: 0 auto; }
+
 /*!
 Pure v1.0.0
 Copyright 2013 Yahoo!

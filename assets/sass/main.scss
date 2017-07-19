@@ -1,14 +1,89 @@
+// Import vars
+@import "_variables.scss";
+@import "_mixins.scss";
+
+* {
+	border: 1px dotted $brand-primary-action;
+}
+
+body {
+	font-family: $brand-base-font-family;
+	font-size: $brand-base-font-size;
+	color: $brand-primary-dark;
+}
+#logo { 
+	float: left;
+	margin: 4px 6px;
+	@include clearfix;
+	img {
+		width: 200px;
+		height: auto;
+	}
+}
+nav {
+	display: block;
+	float:right;
+	margin: 4px 6px 0 0;
+	padding: 4px 12px;
+	@include clearfix;
+	ul {
+		text-decoration: none;
+		list-style: none;
+	}
+	li, li a {
+		margin: 0 auto;
+		padding: 0 12px 2px 5px;
+		display: inline-block;
+		text-align: center;
+	}
+	a, a:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $brand-primary-dark;
+	}
+	.active {
+		color: $brand-primary-action;
+		border-bottom: 4px solid $brand-primary-action; 
+	}
+}
+.hero-banner {
+	margin: 0 auto;
+	width: 100vw;
+	height: 85vh;
+	background: url("http://hanksrepublic.com/wp-content/uploads/2017/05/ravishing-4k-desktop-wallpapers.jpg") no-repeat center center fixed;
+	@include img-full-center; 
+
+}
+
+.hero-info {
+	position: absolute;
+	top: 25%;
+	right: 6%;
+	@include clearfix;
+}
+
+.hero-heading {
+	font-size: $hero-size;
+	color: white;
+}
+
+.static-phone {
+	position: fixed;
+	left: 10%;
+	top: 18%;
+	img {
+		height: 75vh;
+	}	
+}
+
+.container {
+	margin: 0 auto;
+}
+
+
+
+
 // IMPORTS //
-
-
-/* Colors */
-
-$brand-primary-light: #A8DADC;
-$brand-primary-dark: #1D3557;
-$brand-primary-action: #E63946;
-$brand-secondary-light: #F1FAEE;
-$brand-secondary-dark: #457B9D;
-
 //Pure Grid - see documentation here: https://purecss.io/grids/
 @import "_grids-core-min.scss";
 @import "_grids-responsive-min.scss";
