@@ -50,7 +50,7 @@ nav {
 	margin: 0 auto;
 	width: 100vw;
 	height: 85vh;
-	background: url("http://hanksrepublic.com/wp-content/uploads/2017/05/ravishing-4k-desktop-wallpapers.jpg") no-repeat center center fixed;
+	background: url("../images/woman-drilling.jpg") no-repeat center center fixed;
 	@include img-full-center; 
 
 }
@@ -64,7 +64,7 @@ nav {
 
 .hero-heading {
 	font-size: $hero-size;
-	color: white;
+	//color: white;
 }
 
 .static-phone {
@@ -72,7 +72,9 @@ nav {
 	left: 10%;
 	top: 18%;
 	img {
+    	//transform: translateX(50%);
 		height: 75vh;
+		margin-left: 20%;
 	}	
 }
 
