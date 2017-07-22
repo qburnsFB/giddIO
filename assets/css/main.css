@@ -1,10 +1,24 @@
 * {
   border: 1px dotted #E63946; }
 
-body {
+body, p {
   font-family: "objektiv-mk2", sans-serif;
   font-size: 1rem;
   color: #1D3557; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "objektiv-mk2", sans-serif;
+  font-weight: 600; }
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 400; }
+
+h2 {
+  font-size: 1.625rem; }
+
+h3 {
+  font-size: 1.5rem; }
 
 #logo {
   float: left;
@@ -43,15 +57,19 @@ nav {
     border-bottom: 4px solid #E63946; }
 
 .hero-banner {
-  margin: 0 auto;
+  float: right;
   width: 100vw;
-  height: 85vh;
+  height: 80vh;
   background: url("../images/woman-drilling.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden; }
+  .hero-banner:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .hero-info {
   position: absolute;
@@ -63,18 +81,35 @@ nav {
     clear: both; }
 
 .hero-heading {
-  font-size: 4.5rem; }
+  font-family: "objektiv-mk2", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 400; }
 
 .static-phone {
   position: fixed;
   left: 10%;
   top: 18%; }
   .static-phone img {
-    height: 75vh;
+    height: 65vh;
     margin-left: 20%; }
 
 .container {
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 75em; }
+
+.section-title {
+  text-align: center; }
+
+.content-info {
+  float: right;
+  padding: 24px; }
+
+.sketch {
+  float: right; }
+  .sketch:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 /*!
 Pure v1.0.0

@@ -6,11 +6,31 @@
 	border: 1px dotted $brand-primary-action;
 }
 
-body {
+body, p {
 	font-family: $brand-base-font-family;
 	font-size: $brand-base-font-size;
 	color: $brand-primary-dark;
 }
+
+//------------------------- HEADINGS --------------------- //
+h1, h2, h3, h4, h5 {
+	font-family: $brand-base-font-family;
+	font-weight: $heading-weight;
+}
+h1 {
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 1.625rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+
 #logo { 
 	float: left;
 	margin: 4px 6px;
@@ -47,11 +67,12 @@ nav {
 	}
 }
 .hero-banner {
-	margin: 0 auto;
+	float: right;
 	width: 100vw;
-	height: 85vh;
+	height: 80vh;
 	background: url("../images/woman-drilling.jpg") no-repeat center center fixed;
-	@include img-full-center; 
+	@include img-full-center;
+	@include clearfix 
 
 }
 
@@ -63,7 +84,9 @@ nav {
 }
 
 .hero-heading {
+	font-family: $brand-base-font-family;
 	font-size: $hero-size;
+	font-weight: 400;
 	//color: white;
 }
 
@@ -73,17 +96,26 @@ nav {
 	top: 18%;
 	img {
     	//transform: translateX(50%);
-		height: 75vh;
+		height: 65vh;
 		margin-left: 20%;
 	}	
 }
 
 .container {
 	margin: 0 auto;
+	max-width: 75em;
 }
-
-
-
+.section-title {
+	text-align: center;
+}
+.content-info {
+	float: right;
+	padding: 24px;
+}
+.sketch {
+	float:right;
+	@include clearfix;
+}
 
 // IMPORTS //
 //Pure Grid - see documentation here: https://purecss.io/grids/
