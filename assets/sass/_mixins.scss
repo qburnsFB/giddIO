@@ -6,10 +6,26 @@
     overflow: hidden;
 }
 
+@mixin img-fit-center {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+
+}
+
 @mixin clearfix {
   &:after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+@mixin pure-img {
+	img{
+	    max-width: 100%;
+	    height: auto;
+	    display: block;
+	}
 }

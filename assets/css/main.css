@@ -105,11 +105,23 @@ nav {
   padding: 24px; }
 
 .sketch {
-  float: right; }
-  .sketch:after {
-    content: "";
-    display: table;
-    clear: both; }
+  position: absolute;
+  margin-top: -6em;
+  right: 10%;
+  width: 300px;
+  height: 400px;
+  z-index: -1; }
+  .sketch img {
+    max-width: 100%;
+    height: auto;
+    display: block; }
+
+.g-screen {
+  margin: 0 auto; }
+  .g-screen img {
+    max-width: 100%;
+    height: auto;
+    display: block; }
 
 /*!
 Pure v1.0.0

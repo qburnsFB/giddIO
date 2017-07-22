@@ -113,8 +113,19 @@ nav {
 	padding: 24px;
 }
 .sketch {
-	float:right;
-	@include clearfix;
+	position: absolute;
+	margin-top: -6em;
+	right: 10%;
+	width: 300px;
+	height: 400px;
+	@include pure-img;
+	z-index: -1;
+	//@include clearfix;
+}
+
+.g-screen {
+	margin: 0 auto;
+	@include pure-img;
 }
 
 // IMPORTS //
