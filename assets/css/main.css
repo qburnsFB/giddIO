@@ -20,6 +20,11 @@ h2 {
 h3 {
   font-size: 1.5rem; }
 
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase; }
+
 #logo {
   float: left;
   margin: 4px 6px; }
@@ -122,6 +127,27 @@ nav {
     max-width: 100%;
     height: auto;
     display: block; }
+
+footer, footer p {
+  margin-top: 3em;
+  padding: .5em 1em 1em 1em;
+  background-color: #1D3557;
+  color: white; }
+  footer ul, footer p ul {
+    text-decoration: none;
+    list-style: none; }
+  footer a, footer p a {
+    display: inline-block;
+    text-decoration: none;
+    color: white; }
+  footer a:hover, footer p a:hover {
+    border-bottom: 1px solid #E63946; }
+  footer li, footer li a, footer p li, footer p li a {
+    display: inline-block;
+    padding: .25em .5em; }
+
+.social-links {
+  text-align: center; }
 
 /*!
 Pure v1.0.0

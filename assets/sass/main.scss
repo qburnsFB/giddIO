@@ -29,6 +29,11 @@ h2 {
 h3 {
 	font-size: 1.5rem;
 }
+h4 {
+	font-size: 1.25rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
 
 
 #logo { 
@@ -46,10 +51,7 @@ nav {
 	margin: 4px 6px 0 0;
 	padding: 4px 12px;
 	@include clearfix;
-	ul {
-		text-decoration: none;
-		list-style: none;
-	}
+	@include list-no-style;
 	li, li a {
 		margin: 0 auto;
 		padding: 0 12px 2px 5px;
@@ -126,6 +128,24 @@ nav {
 .g-screen {
 	margin: 0 auto;
 	@include pure-img;
+}
+
+footer, footer p {
+	margin-top: 3em;
+	padding: .5em 1em 1em 1em;
+	background-color: $brand-primary-dark;
+	color: $solid-white;
+	@include list-no-style;
+	@include white-a-links;
+	li, li a {
+		display: inline-block;
+		padding: .25em .5em;
+	}
+
+}
+
+.social-links {
+	text-align: center;
 }
 
 // IMPORTS //
