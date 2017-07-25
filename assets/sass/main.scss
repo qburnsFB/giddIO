@@ -93,14 +93,27 @@ nav {
 }
 
 .static-phone {
+	height: 65vh;
 	position: fixed;
-	left: 10%;
+	left: 18.5%;
 	top: 18%;
-	img {
-    	//transform: translateX(50%);
-		height: 65vh;
-		margin-left: 20%;
-	}	
+	background: url(../images/iphone-silver-frame.png) no-repeat;
+	-webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    z-index: 100;
+}
+
+.static-bg-phone1 {
+	height: 100%;
+	//margin-left: 20%;
+	background: url(../images/challenges-screen.png) no-repeat;
+	-webkit-background-size: auto 100%;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: auto 100%;
+    z-index: -10;
 }
 
 .container {
@@ -128,6 +141,7 @@ nav {
 .g-screen {
 	margin: 0 auto;
 	@include pure-img;
+	z-index: 50;
 }
 
 footer, footer p {
@@ -135,11 +149,13 @@ footer, footer p {
 	padding: .5em 1em 1em 1em;
 	background-color: $brand-primary-dark;
 	color: $solid-white;
+	font-family: $brand-base-font-family;
 	@include list-no-style;
 	@include white-a-links;
 	li, li a {
 		display: inline-block;
 		padding: .25em .5em;
+		
 	}
 
 }

@@ -4,6 +4,7 @@
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
+    z-index: -1;
 }
 
 @mixin img-fit-center {
@@ -42,6 +43,7 @@
 		display: inline-block;
 		text-decoration: none;
 		color: white;
+		font-family: $brand-base-font-family;
 	}
 	a:hover {
 		border-bottom: 1px solid $brand-primary-action;
