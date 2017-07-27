@@ -1,6 +1,4 @@
-* {
-  border: 1px dotted #E63946; }
-
+@import url(_nanoreset.min.css);
 body, p {
   font-family: "objektiv-mk2", sans-serif;
   font-size: 1rem;
@@ -27,20 +25,26 @@ h4 {
 
 #logo {
   float: left;
-  margin: 4px 6px; }
+  margin: 4px 6px;
+  width: 12.5rem; }
+  #logo img {
+    max-width: 100%;
+    height: auto;
+    display: block; }
   #logo:after {
     content: "";
     display: table;
     clear: both; }
-  #logo img {
-    width: 200px;
-    height: auto; }
+  @media screen and (min-width: 37.5em) and (max-width: 63.9375em) {
+    #logo {
+      width: 125px; } }
 
 nav {
   display: block;
   float: right;
   margin: 4px 6px 0 0;
-  padding: 4px 12px; }
+  padding: 4px 12px;
+  font-size: 1.25rem; }
   nav:after {
     content: "";
     display: table;
@@ -48,6 +52,13 @@ nav {
   nav ul {
     text-decoration: none;
     list-style: none; }
+  @media screen and (min-width: 37.5em) and (max-width: 63.9375em) {
+    nav {
+      font-size: 1rem;
+      margin: 0 auto;
+      padding: 0; }
+      nav li, nav li a {
+        padding-left: 0; } }
   nav li, nav li a {
     margin: 0 auto;
     padding: 0 12px 2px 5px;
@@ -92,41 +103,51 @@ nav {
   font-weight: 400; }
 
 .static-phone {
-  height: 65vh;
   position: fixed;
+  height: 65vh;
   left: 18.5%;
-  top: 18%;
+  top: 25%;
   background: url(../images/iphone-silver-frame.png) no-repeat;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-  z-index: 100; }
+  z-index: 10; }
 
 .static-bg-phone1 {
+  position: absolute;
+  width: 100%;
   height: 100%;
   background: url(../images/challenges-screen.png) no-repeat;
   -webkit-background-size: auto 100%;
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: auto 100%;
-  z-index: -10; }
+  z-index: 0; }
+  .static-bg-phone1 img {
+    max-width: 100%;
+    height: auto;
+    display: block; }
 
 .container {
   margin: 0 auto;
   max-width: 75em; }
 
 .section-title {
+  border: 1px dotted red;
   text-align: center; }
 
 .content-info {
   float: right;
   padding: 24px; }
 
+.content-section {
+  padding-left: 8em; }
+
 .sketch {
   position: absolute;
   margin-top: -6em;
-  right: 10%;
+  right: 7%;
   width: 300px;
   height: 400px;
   z-index: -1; }
@@ -136,12 +157,37 @@ nav {
     display: block; }
 
 .g-screen {
-  margin: 0 auto;
-  z-index: 50; }
-  .g-screen img {
-    max-width: 100%;
-    height: auto;
-    display: block; }
+  width: 300px;
+  height: 644px;
+  padding-left: 1em;
+  padding-right: 2em;
+  left: 18%;
+  top: 24%;
+  z-index: 1; }
+
+#screen1 {
+  width: 100%;
+  height: 100%;
+  background: url(../images/screen-challenges.jpg) no-repeat;
+  background-size: contain; }
+
+#screen2 {
+  width: 100%;
+  height: 100%;
+  background: url(../images/screen-challenge.jpg) no-repeat;
+  background-size: contain; }
+
+#screen3 {
+  width: 100%;
+  height: 100%;
+  background: url(../images/screen-voting.jpg) no-repeat;
+  background-size: contain; }
+
+#screen4 {
+  width: 100%;
+  height: 100%;
+  background: url(../images/screen-network.jpg) no-repeat;
+  background-size: contain; }
 
 footer, footer p {
   margin-top: 3em;
