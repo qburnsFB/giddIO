@@ -28,7 +28,14 @@
 		<div class="scroll-please"></div>
 		<div class="container">
 			<div class="pure-g">
-				<div class="static-phone" ></div>
+				<div class="scroll-watcher top-watcher"></div>
+				<div class="static-phone">
+						<img src="./assets/images/iphone-silver-frame.png" />
+						<div class="phone-screen"></div>
+						<div class="phone-screen"></div>
+						<div class="phone-screen"></div>
+						<div class="phone-screen"></div>
+				</div>
 				<div class="hero-info pure-u-sm-1-1 pure-u-md-1-2 pure-u-lg-1-2">
 					<h1 class="hero-heading">A new product innovation platform that enables you to do what you love</h1>
 				</div>
@@ -38,22 +45,8 @@
 					<h1 class="section-title">How It Works</h1>
 				</div>
 			</div>
-			<div class="screen-container">
-				<div class="g-screen">
-					<div id="screen1"></div>
-				</div>
-				<div class="g-screen">
-					<div id="screen2"></div>
-				</div>
-				<div class="g-screen">
-					<div id="screen3"></div>
-				</div>
-				<div class="g-screen">
-					<div id="screen4"></div>
-				</div>
-			</div>
-			<article class="pure-g content-section">
-				
+			<article class="pure-g content-section scroll-parent">
+				<div class="scroll-watcher hiw-watcher"></div>
 				<div class="pure-u-sm-1-1 pure-u-md-1-2 pure-u-lg-5-6">
 					<h3>Challenge Yourself, Feel Amazing</h3>
 					<p>On giddy, challenges provide the framework to enable individuals and creators to inspire each other and big communities with new product ides.
@@ -66,7 +59,8 @@
 				
 			</article>
 			
-			<article class="pure-g content-section">
+			<article class="pure-g content-section scroll-parent">
+				<div class="scroll-watcher showtell-watcher"></div>
 				
 				<div class="pure-u-sm-1-1 pure-u-md-1-2 pure-u-lg-5-6">
 					<h3>Show &amp; Tell</h3>
@@ -83,7 +77,8 @@
 					<img src="assets/images/character-idea.png" />
 				</div>
 			</article>
-			<article class="pure-g content-section">
+			<article class="pure-g content-section scroll-parent">
+				<div class="scroll-watcher emojivoting-watcher"></div>
 				
 				<div class="pure-u-sm-1-1 pure-u-md-1-2 pure-u-lg-5-6">
 					<h3>Emoji Voting FTW</h3>
@@ -109,7 +104,7 @@
 				<div class="pure-u-sm-1-1 pure-u-md-1-1 pure-u-lg-1-1 section-title">
 					<h1>Get Started Now!</h1>
 				</div>
-				<div class="g-screen pure-u-sm-1-4 pure-u-lg-1-3">3
+				<div class="g-screen pure-u-sm-1-4 pure-u-lg-1-3">
 						<img src="">
 				</div>
 				<div class="pure-u-sm-1-1 pure-u-md-1-2 pure-u-lg-5-8">
@@ -144,14 +139,42 @@
 				</div>
 			</div>
 		</footer>
+		<script src="http://cdn.jsdelivr.net/scroll-watcher/latest/scroll-watcher.min.js"></script>
 		<script type="text/javascript">
-			function updateSize() {
-				var win-width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-				document.getElementById('window-size').innerHTML = win-width;
-			}
-			window.onload = updateSize;
-			window.onreload = updateSize;
+			var screens;
+            function startWatching() {
+			  screens = document.getElementsByClassName('phone-screen');
+              var scroll = new ScrollWatcher();
+              scroll.watch('.top-watcher')
+                  .on('enter', function (evt) {
+                    handleEntrance(0);
+                  })
+              scroll.watch('.hiw-watcher')
+                  .on('enter', function (evt) {
+                    handleEntrance(1);
+                  })
+              scroll.watch('.showtell-watcher')
+                  .on('enter', function (evt) {
+                    handleEntrance(2);
+                  })
+              scroll.watch('.emojivoting-watcher')
+                  .on('enter', function (evt) {
+                    handleEntrance(3);
+                  })
+            }
 
+            function handleEntrance(which) {
+              for (var i = 0; i < screens.length; i++) {
+                if (i !== which) {
+                  screens[i].setAttribute('style', 'opacity: 0');
+                } else {
+                  screens[which].setAttribute('style', 'opacity: 1');
+				}
+
+              }
+            }
+
+            startWatching();
 		</script>
 	</body>
 </html>
