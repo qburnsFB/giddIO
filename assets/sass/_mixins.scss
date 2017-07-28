@@ -57,23 +57,23 @@
 @mixin breakpoint($point) {
    @if $point == desktop {
    	// 1024 px - 1199 px
-     @media screen and (min-width: 64em) and (max-width: 74.9375em) { @content ; }
+     @media screen and (min-width: 64rem) and (max-width: 74.9375rem) { @content ; }
   }
    @else if $point == laptop {
    	// 1024 px
      @media screen and (min-width: 64rem) { @content ; }
   }
-    @else if $point == tablet {
-    // 600 px - 1023 px wide
-     @media screen and (min-width: 37.5em) and (max-width: 63.9375em) { @content ; }
+    @else if $point == large-tablet {
+    // 768 px - 1023 px wide
+     @media screen and (min-width: 48rem) and (max-width: 63.9375rem) { @content ; }
   }
    @else if $point == phablet {
-   	// 600 px and up
-     @media screen and (min-width: 37.5rem)  { @content ; }
+   	// 568 px to 767 px
+     @media screen and (min-width: 35.5rem) and (max-width: 47.9375rem) { @content ; }
   }
-  @else if $point == mobileonly {
-  	// under 600 px
-     @media screen and (max-width: 37.4375rem)  { @content ; }
+  @else if $point == mobile-only {
+  	// under 567 px
+     @media screen and (max-width: 35.4375rem)  { @content ; }
 
   }
 }
