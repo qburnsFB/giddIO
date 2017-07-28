@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="500px" viewBox="0 0 1024 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="164.179238%" cy="170.071794%" fx="164.179238%" fy="170.071794%" r="232.023466%" gradientTransform="translate(1.641792,1.700718),scale(0.488036,1.000000),rotate(-152.685277),scale(1.000000,0.972937),translate(-1.641792,-1.700718)" id="radialGradient-1">
+            <stop stop-color="#A8DADC" offset="0%"></stop>
+            <stop stop-color="#5ABCB4" offset="10.3068094%"></stop>
+            <stop stop-color="#D4EDE7" offset="73.5692053%"></stop>
+            <stop stop-color="#F1FAEE" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.818557518">
+        <g id="Hero-Image-&amp;-Copy" fill="url(#radialGradient-1)">
+            <g id="Image">
+                <rect id="Rectangle" x="0" y="0" width="1024" height="499.74839"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
