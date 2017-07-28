@@ -223,6 +223,7 @@ nav {
 }
 .section-title {
 	text-align: center;
+	text-transform: uppercase;
 }
 .content-info {
 	float: right;
@@ -231,6 +232,7 @@ nav {
 
 .content-section {
 	padding-left: 28rem;
+	padding-bottom: 2rem;
 	@include breakpoint(desktop) {
 		
 	}
@@ -248,15 +250,28 @@ nav {
 	}
 }
 .sketch {
-	position: absolute;
-	margin-top: -6em;
-	right: 7%;
+	position: relative;
+	margin-top: -2rem;
+	margin-right: 4rem;
+	float:right;
 	width: 300px;
 	height: 400px;
 	@include pure-img;
+	@include clearfix;
+}
+.sketch:before {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	width: 400px;
+	height: 225px;
+	margin-top: 2rem;
+	margin-left: -24%;
+	border-radius: .5rem;
+	background-color: $brand-primary-light;
+	opacity: .8;
 	z-index: -1;
-	// display: none;
-	//@include clearfix;
+
 }
 .screen-container {
 	position: absolute;

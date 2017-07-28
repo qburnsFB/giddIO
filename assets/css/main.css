@@ -34,7 +34,7 @@ h4 {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (min-width: 48rem) and (max-width: 63.9375rem) {
+  @media screen and (min-width: 48rem) and (max-width: 63.6875rem) {
     #logo {
       width: 125px; } }
   @media screen and (min-width: 35.5rem) and (max-width: 47.9375rem) {
@@ -69,7 +69,7 @@ nav {
   nav .active {
     color: #E63946;
     border-bottom: 4px solid #E63946; }
-  @media screen and (min-width: 48rem) and (max-width: 63.9375rem) {
+  @media screen and (min-width: 48rem) and (max-width: 63.6875rem) {
     nav {
       font-size: 1rem;
       margin: 0 auto;
@@ -111,14 +111,14 @@ nav {
   position: absolute;
   right: 6%;
   text-transform: none; }
-  @media screen and (min-width: 64rem) and (max-width: 74.9375rem) {
+  @media screen and (min-width: 63.75rem) and (max-width: 74.9375rem) {
     .hero-info {
       top: 30%;
       right: 3%; } }
-  @media screen and (min-width: 64rem) {
+  @media screen and (min-width: 63.75rem) {
     .hero-info {
       top: 20%; } }
-  @media screen and (min-width: 48rem) and (max-width: 63.9375rem) {
+  @media screen and (min-width: 48rem) and (max-width: 63.6875rem) {
     .hero-info {
       top: 20%;
       right: 2%; } }
@@ -135,13 +135,13 @@ nav {
 .hero-heading {
   font-family: "objektiv-mk2", sans-serif;
   font-weight: 400; }
-  @media screen and (min-width: 64rem) and (max-width: 74.9375rem) {
+  @media screen and (min-width: 63.75rem) and (max-width: 74.9375rem) {
     .hero-heading {
       font-size: 4.5rem; } }
-  @media screen and (min-width: 64rem) {
+  @media screen and (min-width: 63.75rem) {
     .hero-heading {
       font-size: 4rem; } }
-  @media screen and (min-width: 48rem) and (max-width: 63.9375rem) {
+  @media screen and (min-width: 48rem) and (max-width: 63.6875rem) {
     .hero-heading {
       font-size: 3rem; } }
   @media screen and (min-width: 35.5rem) and (max-width: 47.9375rem) {
@@ -163,15 +163,15 @@ nav {
   -o-background-size: contain;
   background-size: contain;
   z-index: 10; }
-  @media screen and (min-width: 64rem) and (max-width: 74.9375rem) {
+  @media screen and (min-width: 63.75rem) and (max-width: 74.9375rem) {
     .static-phone {
       height: 70vh;
       left: 8%; } }
-  @media screen and (min-width: 64rem) {
+  @media screen and (min-width: 63.75rem) {
     .static-phone {
       height: 60vh;
       top: 18%; } }
-  @media screen and (min-width: 48rem) and (max-width: 63.9375rem) {
+  @media screen and (min-width: 48rem) and (max-width: 63.6875rem) {
     .static-phone {
       height: 50vh;
       left: 5%;
@@ -205,29 +205,48 @@ nav {
   max-width: 75em; }
 
 .section-title {
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
 
 .content-info {
   float: right;
   padding: 24px; }
 
 .content-section {
-  padding-left: 28rem; }
+  padding-left: 28rem;
+  padding-bottom: 2rem; }
   @media screen and (max-width: 35.4375rem) {
     .content-section {
       padding-left: .5rem; } }
 
 .sketch {
-  position: absolute;
-  margin-top: -6em;
-  right: 7%;
+  position: relative;
+  margin-top: -2rem;
+  margin-right: 4rem;
+  float: right;
   width: 300px;
-  height: 400px;
-  z-index: -1; }
+  height: 400px; }
   .sketch img {
     max-width: 100%;
     height: auto;
     display: block; }
+  .sketch:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.sketch:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 400px;
+  height: 225px;
+  margin-top: 2rem;
+  margin-left: -24%;
+  border-radius: .5rem;
+  background-color: #A8DADC;
+  opacity: .8;
+  z-index: -1; }
 
 .screen-container {
   position: absolute; }

@@ -56,16 +56,16 @@
 
 @mixin breakpoint($point) {
    @if $point == desktop {
-   	// 1024 px - 1199 px
-     @media screen and (min-width: 64rem) and (max-width: 74.9375rem) { @content ; }
+   	// 1020 px - 1199 px
+     @media screen and (min-width: 63.75rem) and (max-width: 74.9375rem) { @content ; }
   }
    @else if $point == laptop {
-   	// 1024 px
-     @media screen and (min-width: 64rem) { @content ; }
+   	// 1020 px
+     @media screen and (min-width: 63.75rem) { @content ; }
   }
     @else if $point == large-tablet {
-    // 768 px - 1023 px wide
-     @media screen and (min-width: 48rem) and (max-width: 63.9375rem) { @content ; }
+    // 768 px - 1020 px wide
+     @media screen and (min-width: 48rem) and (max-width: 63.6875rem) { @content ; }
   }
    @else if $point == phablet {
    	// 568 px to 767 px
