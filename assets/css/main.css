@@ -170,7 +170,7 @@ nav {
 
 .static-phone {
   position: fixed;
-  max-width: 20%;
+  max-width: 300px;
   left: 12%;
   top: 17%;
   z-index: 10; }
@@ -215,8 +215,21 @@ nav {
 
 .scroll-watcher {
   position: absolute;
-  top: 600px;
+  height: 1px;
+  width: 500px;
   background: red; }
+
+.top-watcher {
+  top: 400px; }
+
+.hiw-watcher {
+  top: 300px; }
+
+.showtell-watcher {
+  top: 400px; }
+
+.emojivoting-watcher {
+  top: 300px; }
 
 .static-bg-phone1 {
   position: absolute;

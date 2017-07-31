@@ -78,10 +78,10 @@
 					<img src="assets/images/character-idea.png" />
 				</div>
 			</article>
-			<article class="pure-g content-section scroll-parent">
-				<div class="scroll-watcher emojivoting-watcher"></div>
+			<article class="pure-g content-section">
 				
-				<div class="pure-u-sm-1-1 pure-u-md-1-2 pure-u-lg-5-6">
+				<div class="pure-u-sm-1-1 pure-u-md-1-2 pure-u-lg-5-6 scroll-parent">
+					<div class="scroll-watcher emojivoting-watcher"></div>
 					<h3>Emoji Voting FTW</h3>
 					<p>Provide your emoji reaction on on entry to show the idea creator what you think. The entry with the most emoji from the top category will be crowned the winner of the challenge.</p>
 					
@@ -165,6 +165,7 @@
             }
 
             function handleEntrance(which) {
+              console.log(which)
               for (var i = 0; i < screens.length; i++) {
                 if (i !== which) {
                   screens[i].setAttribute('style', 'opacity: 0');
