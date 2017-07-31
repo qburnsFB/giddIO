@@ -1,14 +1,330 @@
+// Import vars
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_nanoreset.min.css";
+
+// * {
+// 	border: 1px dotted $brand-primary-action;
+// }
+
+body, p {
+	font-family: $brand-base-font-family;
+	font-size: $brand-base-font-size;
+	color: $brand-primary-dark;
+}
+
+//------------------------- HEADINGS --------------------- //
+h1, h2, h3, h4, h5 {
+	font-family: $brand-base-font-family;
+	font-weight: $heading-weight;
+}
+h1 {
+	//text-transform: uppercase;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 1.625rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+h4 {
+	font-size: 1.25rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+
+#logo { 
+	float: left;
+	margin: 4px 6px;
+	width: 12.5rem;
+	@include pure-img;
+	@include clearfix;
+	@include breakpoint(large-tablet) {
+		width: 125px;
+	}
+	@include breakpoint(phablet) {
+		width: 125px;
+	}
+	@include breakpoint(mobile-only) {
+		width: 100px;
+	}
+
+}
+nav {
+	display: block;
+	float:right;
+	margin: 4px 6px 0 0;
+	padding: 4px 12px;
+	font-size: 1.25rem;
+	@include clearfix;
+	@include list-no-style;
+	li, li a {
+		margin: 0 auto;
+		padding: 0 12px 2px 5px;
+		display: inline-block;
+		text-align: center;
+	}
+	a, a:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $brand-primary-dark;
+	}
+	.active {
+		color: $brand-primary-action;
+		border-bottom: 4px solid $brand-primary-action; 
+	}
+	@include breakpoint(large-tablet) {
+		font-size: 1rem;
+		margin: 0 auto;
+		padding: 0;
+		li, li a {
+			padding-left:0;
+			padding-right: 6px;
+		}
+	}
+	@include breakpoint(phablet) {
+		font-size: 1rem;
+		margin: 0 auto;
+		padding: 0;
+		li, li a {
+			padding-left:0;
+			padding-right: 6px;
+		}
+	}
+
+	@include breakpoint(mobile-only) {
+		display: none;
+	}
+	
+	
+}
+.hero-banner {
+	width: 100vw;
+	height: 75vh;
+	background: url("../images/woman-drilling.jpg") no-repeat center center fixed;
+	@include img-full-center;
+	overflow: hidden;
+	@include breakpoint(large-tablet) {
+		
+	}
+	@include breakpoint(phablet) {
+		height: 70vh;
+	}
+	@include breakpoint(mobile-only) {
+		height: 70vh;
+	}
+}
+
+.hero-info {
+	position: absolute;
+	right: 6%;
+	text-transform: none;
+	@include breakpoint(desktop) {
+		top: 30%;
+		right: 3%
+	}
+	@include breakpoint(laptop) {
+		top: 20%;
+	}
+	@include breakpoint(large-tablet) {
+		top: 20%;
+		right: 2%
+	}
+	@include breakpoint(phablet) {
+		top: 18%;
+		left: 50%;
+		width: 14rem;
+	}
+	@include breakpoint(mobile-only) {
+		top: 20%;
+		right: 0;
+	}
+}
+
+.hero-heading {
+	font-family: $brand-base-font-family;
+	font-weight: 400;
+	//color: white;
+	@include breakpoint(desktop) {
+		font-size: $hero-xl;
+	}
+	@include breakpoint(laptop) {
+		font-size: $hero-lg;
+	}
+	@include breakpoint(large-tablet) {
+		font-size: $hero-md;
+	}
+	@include breakpoint(phablet) {
+		font-size: $hero-sm;
+	}
+	@include breakpoint(mobile-only) {
+		font-size: $hero-sm;
+	}
+}
+
+.static-phone {
+	position: fixed;
+	max-width: 20%;
+	left: 12%;
+	top: 17%;
+    z-index: 10;
+
+	@include breakpoint(mobile-only) {
+		display: none;
+	}
+
+	img {
+		position: relative;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.phone-screen {
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		width: 88%;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: opacity 200ms;
+		height: 100%;
+		background: url(../images/launch-screen.png) center center no-repeat;
+		background-size: contain;
+
+		&:nth-of-type(2) {
+			background: url(../images/screen-challenges.jpg) center center no-repeat;
+			background-size: contain;
+			opacity: 0;
+		}
+
+		&:nth-of-type(3) {
+			background: url(../images/screen-challenge.jpg) center center no-repeat;
+			background-size: contain;
+			opacity: 0;
+		}
+
+		&:nth-of-type(4) {
+			background: url(../images/screen-voting.jpg) center center no-repeat;
+			background-size: contain;
+			opacity: 0;
+		}
+
+		&:nth-of-type(5) {
+			background: url(../images/screen-network.jpg) center center no-repeat;
+			background-size: contain;
+			opacity: 0;
+		}
+	}
+
+}
+
+.scroll-parent {
+	position: relative;
+}
+
+.scroll-watcher {
+	position: absolute;
+	top: 600px;
+	background: red;
+}
+
+.static-bg-phone1 {
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	//margin-left: 20%;
+	background: url(../images/challenges-screen.png) no-repeat;
+	-webkit-background-size: auto 100%;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: auto 100%;
+    z-index: 0;
+    @include pure-img;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 75em;
+}
+.section-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+.content-info {
+	float: right;
+	padding: 24px;
+}
+
+.content-section {
+	padding-left: 28rem;
+	padding-bottom: 2rem;
+	@include breakpoint(desktop) {
+		
+	}
+	@include breakpoint(laptop) {
+		
+	}
+	@include breakpoint(large-tablet) {
+		
+	}
+	@include breakpoint(phablet) {
+		
+	}
+	@include breakpoint(mobile-only) {
+		padding-left: .5rem;
+	}
+}
+.sketch {
+	position: relative;
+	margin-top: -2rem;
+	margin-right: 4rem;
+	float:right;
+	width: 300px;
+	height: 400px;
+	@include pure-img;
+	@include clearfix;
+
+	&:before {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		width: 400px;
+		height: 225px;
+		margin-top: 2rem;
+		margin-left: -24%;
+		border-radius: .5rem;
+		background-color: $brand-primary-light;
+		opacity: .8;
+		z-index: -1;
+	}
+}
+
+
+footer, footer p {
+	margin-top: 3em;
+	padding: .5em 1em 1em 1em;
+	background-color: $brand-primary-dark;
+	color: $solid-white;
+	font-family: $brand-base-font-family;
+	@include list-no-style;
+	@include white-a-links;
+	li, li a {
+		display: inline-block;
+		padding: .25em .5em;
+
+	}
+
+}
+
+.social-links {
+	text-align: center;
+}
+
 // IMPORTS //
-
-
-/* Colors */
-
-$brand-primary-light: #A8DADC;
-$brand-primary-dark: #1D3557;
-$brand-primary-action: #E63946;
-$brand-secondary-light: #F1FAEE;
-$brand-secondary-dark: #457B9D;
-
 //Pure Grid - see documentation here: https://purecss.io/grids/
-@import "_grids-core-min.scss";
-@import "_grids-responsive-min.scss";
+@import "_grid.scss";
